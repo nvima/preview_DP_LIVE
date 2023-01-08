@@ -2,7 +2,6 @@
     <div class="absolute top-5 right-5">
         <LanguageSwitch />
     </div>
-
     <div class="mx-auto px-12 py-16 sm:p-24 bg-gray-200 h-screen">
         <div class="relative rounded-lg block lg:flex items-center bg-gray-100 shadow-xl h-full">
             <div
@@ -46,16 +45,19 @@
             </button>
         </div>
     </div>
+    <div class="flex absolute bottom-2 justify-center w-full">
+        <a href="https://delivery.plus/legal-notice" target="_blank" class="text-gray-600 text-sm hover:underline">
+            {{
+        $t('imprint')
+            }}
+        </a>
+    </div>
 </template>
 <script setup>
 import { useHead } from '@unhead/vue';
 import { onBeforeMount, ref } from 'vue';
 import { useI18n } from "vue-i18n";
 import LanguageSwitch from '@/components/LanguageSwitch.vue';
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const lang = urlParams.get('lang')
-console.log(lang);
 const i18nLocale = useI18n();
 const shopCollection = ref([
     { name: 'Pizza Italian', desc: 'design1Desc', bg: 'design1bg.jpg', index: 0, design: 'design1' },

@@ -1,13 +1,13 @@
 {
-  "name": "vite-vue3-tailwind-starter",
+  "name": "preview_dp_live",
   "version": "0.0.0",
+  "author": "nvima",
   "scripts": {
     "dev": "VITE_DEV=1 vite --host",
     "build": "vite build",
     "build-netlify": "VITE_DEV=1 vite build",
     "serve": "vite preview",
-    "translate": "node -r esm translate.js && node -r esm translate_deepl.js",
-    "deploy": "aws s3 sync ./dist s3://dp-live-websites/design2/ --delete"
+    "translate": "node -r esm translate.js && node -r esm translate_deepl.js"
   },
   "dependencies": {
     "@paypal/paypal-js": "^5.1.1",
